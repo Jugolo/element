@@ -1,0 +1,7 @@
+---- V1.1 ----
+--News
+  Append method 'create' to element to easy create a new dom will like as: element(document.createElement("div")) -> element.create("div");
+  Append method 'attribute' where you can set or set a doms attribute
+--Change
+  Changed the hole script so you can extens the class: EM.prototype.name = function(){};
+  element.append now accept element as dom
