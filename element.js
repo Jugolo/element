@@ -65,8 +65,11 @@ EM.prototype.removeClass = function(c){
 EM.prototype.append = function(dom){
   if(dom instanceof EM)
     this.dom.appendChild(dom.getDom());
-  else
+  else{
+    if(typeof dom === "string")
+      dom = document.createTextNode(dom);
     this.dom.appendChild(dom);
+  }
 };
 
 EM.prototype.disable = function(bool){
