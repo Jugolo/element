@@ -6,6 +6,10 @@ function EM(dom){
   this.dom = dom;
 }
 
+EM.prototype.parent = function(){
+  return this.dom.parentNode;
+};
+
 EM.prototype.value = function(){
   if(arguments.length > 0){
     if(this.dom instanceof HTMLInputElement){
