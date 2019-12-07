@@ -7,7 +7,10 @@ function EM(dom){
 }
 
 EM.prototype.parent = function(){
-  return this.dom.parentNode;
+  var node = this.dom.parentNode;
+  if(node === null)
+    return null;
+  return element(node);
 };
 
 EM.prototype.value = function(){
