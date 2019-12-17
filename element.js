@@ -164,7 +164,7 @@ const element = (function(){
   };
     
   element.options = {
-      "on.click.cursor" : false
+      "on.click.cursor" : null
   };
   
   return element;
