@@ -34,6 +34,9 @@ EM.prototype.getDom = function(){
 };
 
 EM.prototype.on = function(on, callable){
+  if(typeof element.options["on.click.cursor"] == "string" && on == "click"){
+      this.style("cursor", element.options["on.click.cursor"]);
+  }
   const self = this;
   this.dom.addEventListener(on, (event) => callable.call(self, event));
 };
@@ -158,6 +161,10 @@ const element = (function(){
   
   element.create = function(str){
     return element(document.createElement(str));
+  };
+    
+  element.options = {
+      "on.click.pointer" : false
   };
   
   return element;
