@@ -164,7 +164,7 @@ const element = (function(){
   };
     
   element.options = {
-      "on.click.pointer" : false
+      "on.click.cursor" : false
   };
   
   return element;
