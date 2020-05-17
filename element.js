@@ -6,6 +6,10 @@ function EM(dom){
   this.dom = dom;
 }
 
+EM.prototype.query = function(query){
+    return element(this.getDom().querySelectorAll(query));
+};
+
 EM.prototype.parent = function(){
   var node = this.dom.parentNode;
   if(node === null)
