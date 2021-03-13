@@ -72,6 +72,10 @@ EM.prototype.removeClass = function(c){
   this.dom.classList.remove(c);
 };
 
+EM.prototype.classExists = function(n){
+  return this.dom.classList.contains(n);  
+};
+
 EM.prototype.append = function(dom){
   if(dom instanceof EM)
     this.dom.appendChild(dom.getDom());
