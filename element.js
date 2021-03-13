@@ -152,6 +152,10 @@ const element = (function(){
             }
           };
         }
+          
+        if(name == "length"){
+          return dom.length;   
+        }
       },
       getPrototypeOf : function(){
         return EM.prototype;
