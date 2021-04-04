@@ -46,6 +46,11 @@ EM.prototype.isVisible = function(){
 };
 
 EM.prototype.attribute = function(...arg){
+  if(arg.length == 1 && typeof arg[0] == "object"){
+    for(key in arg[0])
+      this.attribute(key, arg[0][key]);
+    return;
+  }
   if(arg.length == 2)
     this.dom.setAttribute(arg[0], arg[1]);
   
